@@ -1,12 +1,5 @@
 $(document).ready(function () {
 
-    $("#enviar").click(function() {
-        $(".titulo h1").text("Formulario enviado").css("color", "green");
-        setInterval(function() {
-            location.reload();
-          }, 3000);
-    });
-
     var cambio = false;
     $("#reclamo").click(function () {
         if (cambio) {
@@ -50,5 +43,7 @@ $(document).ready(function () {
         } else if (numero.value === '') {
             event.preventDefault();
             alert('Por favor ingrese su numero');
+        } else {
+            alert("Formulario enviado")
         }
     });
